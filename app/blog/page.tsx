@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getAllPosts } from "@/lib/posts";
 import { PostGrid } from "@/components/blog/PostGrid";
 import { PostListSkeleton } from "@/components/blog/PostListSkeleton";
-import { AnimatedHeroText, AnimatedBackground } from "@/components/react-bits";
+import { AnimatedHeroText } from "@/components/react-bits";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
@@ -39,11 +39,9 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with React Bits Background */}
-      <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
-        <AnimatedBackground />
-
-        <div className="container relative z-10 mx-auto px-4">
+      {/* Hero Section - Background sudah di layout */}
+      <section className="py-20 md:py-28 lg:py-32">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* Animated Hero Title - React Bits Component #1 */}
             <AnimatedHeroText className="mb-4">Blog</AnimatedHeroText>

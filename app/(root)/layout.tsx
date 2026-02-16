@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AppBackground } from "@/components/layout/AppBackground";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AppBackground variant="glow" opacity={0.6} />
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
